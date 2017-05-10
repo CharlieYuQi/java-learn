@@ -15,16 +15,14 @@
  */
 package tk.yuqibit.nio.protocol.netty.client;
 
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import tk.yuqibit.nio.protocol.netty.MessageType;
 import tk.yuqibit.nio.protocol.netty.struct.Header;
 import tk.yuqibit.nio.protocol.netty.struct.NettyMessage;
+
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Lilinfeng

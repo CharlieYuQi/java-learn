@@ -21,13 +21,12 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPipeline;
 import io.netty.handler.codec.MessageToMessageEncoder;
-
-import java.io.StringWriter;
-import java.nio.charset.Charset;
-
 import org.jibx.runtime.BindingDirectory;
 import org.jibx.runtime.IBindingFactory;
 import org.jibx.runtime.IMarshallingContext;
+
+import java.io.StringWriter;
+import java.nio.charset.Charset;
 
 /**
  * @author Administrator

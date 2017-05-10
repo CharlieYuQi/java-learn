@@ -16,9 +16,7 @@
 package tk.yuqibit.nio.codec.serializable.netty;
 
 import io.netty.channel.ChannelHandler.Sharable;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import tk.yuqibit.nio.codec.pojo.SubscribeReq;
 import tk.yuqibit.nio.codec.pojo.SubscribeResp;

@@ -26,12 +26,11 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpRequestEncoder;
 import io.netty.handler.codec.http.HttpResponseDecoder;
-
-import java.net.InetSocketAddress;
-
 import tk.yuqibit.nio.protocol.http.xml.codec.HttpXmlRequestEncoder;
 import tk.yuqibit.nio.protocol.http.xml.codec.HttpXmlResponseDecoder;
 import tk.yuqibit.nio.protocol.http.xml.pojo.Order;
+
+import java.net.InetSocketAddress;
 
 /**
  * @author lilinfeng

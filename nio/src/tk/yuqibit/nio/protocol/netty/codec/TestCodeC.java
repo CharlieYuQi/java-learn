@@ -17,13 +17,12 @@ package tk.yuqibit.nio.protocol.netty.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import tk.yuqibit.nio.protocol.netty.struct.Header;
+import tk.yuqibit.nio.protocol.netty.struct.NettyMessage;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
-import tk.yuqibit.nio.protocol.netty.struct.Header;
-import tk.yuqibit.nio.protocol.netty.struct.NettyMessage;
 
 /**
  * @author Administrator

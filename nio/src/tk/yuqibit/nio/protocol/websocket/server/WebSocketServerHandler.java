@@ -15,10 +15,6 @@
  */
 package tk.yuqibit.nio.protocol.websocket.server;
 
-import static io.netty.handler.codec.http.HttpHeaders.isKeepAlive;
-import static io.netty.handler.codec.http.HttpHeaders.setContentLength;
-import static io.netty.handler.codec.http.HttpResponseStatus.BAD_REQUEST;
-import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
@@ -39,6 +35,11 @@ import io.netty.util.CharsetUtil;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static io.netty.handler.codec.http.HttpHeaders.isKeepAlive;
+import static io.netty.handler.codec.http.HttpHeaders.setContentLength;
+import static io.netty.handler.codec.http.HttpResponseStatus.BAD_REQUEST;
+import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 /**
  * @author lilinfeng

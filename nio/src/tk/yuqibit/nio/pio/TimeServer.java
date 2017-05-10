@@ -15,11 +15,11 @@
  */
 package tk.yuqibit.nio.pio;
 
+import tk.yuqibit.nio.bio.TimeServerHandler;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-
-import tk.yuqibit.nio.bio.TimeServerHandler;
 
 /**
  * @author lilinfeng

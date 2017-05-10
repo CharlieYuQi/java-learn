@@ -17,10 +17,9 @@ package tk.yuqibit.nio.protocol.netty.codec;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler.Sharable;
+import org.jboss.marshalling.Marshaller;
 
 import java.io.IOException;
-
-import org.jboss.marshalling.Marshaller;
 
 /**
  * @author Lilinfeng

@@ -15,9 +15,7 @@
  */
 package tk.yuqibit.nio.protocol.netty.server;
 
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import tk.yuqibit.nio.protocol.netty.MessageType;
 import tk.yuqibit.nio.protocol.netty.struct.Header;

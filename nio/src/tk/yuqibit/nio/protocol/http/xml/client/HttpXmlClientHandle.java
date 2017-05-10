@@ -17,7 +17,6 @@ package tk.yuqibit.nio.protocol.http.xml.client;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-
 import tk.yuqibit.nio.protocol.http.xml.codec.HttpXmlRequest;
 import tk.yuqibit.nio.protocol.http.xml.codec.HttpXmlResponse;
 import tk.yuqibit.nio.protocol.http.xml.pojo.OrderFactory;

@@ -15,9 +15,6 @@
  */
 package tk.yuqibit.nio.protocol.http.xml.codec;
 
-import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
-import static io.netty.handler.codec.http.HttpResponseStatus.BAD_REQUEST;
-import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
@@ -28,6 +25,10 @@ import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.util.CharsetUtil;
 
 import java.util.List;
+
+import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
+import static io.netty.handler.codec.http.HttpResponseStatus.BAD_REQUEST;
+import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 /**
  * @author Lilinfeng
