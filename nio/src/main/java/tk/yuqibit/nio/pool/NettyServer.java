@@ -18,7 +18,7 @@ import io.netty.util.concurrent.DefaultEventExecutorGroup;
 /**
  * Created by YuQi on 2017/7/31.
  */
-public class HttpServer {
+public class NettyServer {
     public void run(final int port) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -32,7 +32,7 @@ public class HttpServer {
                             ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024, delimiter))
                                     .addLast(new StringDecoder()).addLast(new StringEncoder())
                                     .addLast(new DefaultEventExecutorGroup(8),
-                                            new HttpServerHandler());
+                                            new NettyServerHandler());
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
@@ -53,7 +53,6 @@ public class HttpServer {
                 e.printStackTrace();
             }
         }
-
-        new HttpServer().run(port);
+        new NettyServer().run(port);
     }
 }

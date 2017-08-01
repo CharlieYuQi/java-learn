@@ -12,7 +12,7 @@ import io.netty.handler.codec.string.StringEncoder;
 /**
  * Created by YuQi on 2017/7/31.
  */
-public class HttpChannelPoolHandler implements ChannelPoolHandler {
+public class NettyChannelPoolHandler implements ChannelPoolHandler {
     @Override
     public void channelReleased(Channel ch) throws Exception {
         System.out.println("channelReleased. Channel ID: " + ch.id());
@@ -32,7 +32,7 @@ public class HttpChannelPoolHandler implements ChannelPoolHandler {
         channel.config().setTcpNoDelay(true);
         channel.pipeline()
                 .addLast(new DelimiterBasedFrameDecoder(1024, delimiter))
-                .addLast(new StringDecoder()).addLast(new StringEncoder()).addLast(new HttpClientHander());
+                .addLast(new StringDecoder()).addLast(new StringEncoder()).addLast(new NettyClientHander());
 
     }
 }
