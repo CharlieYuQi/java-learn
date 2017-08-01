@@ -20,7 +20,7 @@ public class CyclicBarrierTest {
         public void run() {
             // TODO Auto-generated method stub
             try{
-                System.out.println("Worker's waiting");
+                System.out.println("ID:"+Thread.currentThread().getId()+" Worker's waiting");
                 //线程在这里等待，直到所有线程都到达barrier。
                 barrier.await();
                 System.out.println("ID:"+Thread.currentThread().getId()+" Working");
@@ -41,7 +41,7 @@ public class CyclicBarrierTest {
             @Override
             public void run() {
                 // TODO Auto-generated method stub
-                System.out.println("Inside Barrier");
+                System.out.println("ID:"+Thread.currentThread().getId()+" Inside Barrier");
 
             }
         });
