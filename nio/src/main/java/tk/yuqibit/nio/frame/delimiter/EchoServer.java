@@ -29,6 +29,7 @@ import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleStateHandler;
 
 /**
  * @author lilinfeng
@@ -52,6 +53,7 @@ public class EchoServer {
 				throws Exception {
 			    ByteBuf delimiter = Unpooled.copiedBuffer("$_"
 				    .getBytes());
+				ch.pipeline().addLast(new IdleStateHandler(0,0,5));
 			    ch.pipeline().addLast(
 				    new DelimiterBasedFrameDecoder(1024,
 					    delimiter));
