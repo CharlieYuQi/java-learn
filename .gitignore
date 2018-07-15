@@ -1,0 +1,13 @@
+.idea
+*.iml
+.idea/*
+.git/*
+*.iml
+*.class
+*.classpath
+*.project
+*.settings
+*/target/
+.DS_Store
+*.log
+*.lst
