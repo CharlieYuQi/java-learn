@@ -68,6 +68,11 @@ public class BeanCopyUtil {
         return result;
     }
 
+    /**
+     *
+     * @param src
+     * @param target
+     */
     public static void copyPropertiesIgnoreNull(Object src, Object target) {
         copy(src, target, CopyMode.OVER_WRITE_MODE);
     }
