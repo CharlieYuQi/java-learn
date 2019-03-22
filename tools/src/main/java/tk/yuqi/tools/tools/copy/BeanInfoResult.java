@@ -38,7 +38,7 @@ public class BeanInfoResult {
                 propertyDescriptorCache.put(pd.getName(), pd);
             }
         } catch (Exception e) {
-            throw new RuntimeException("get beaninfo error", e);
+            throw new RuntimeException("get beaninfo exception", e);
         }
     }
 

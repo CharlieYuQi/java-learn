@@ -30,7 +30,7 @@ public class BeanCopyUtil {
         }
         Copier copier = copierMap.get(mode);
         if (copier == null) {
-            throw new IllegalArgumentException("copy mode error. mode=" + mode);
+            throw new IllegalArgumentException("copy mode exception. mode=" + mode);
         }
         copier.copy(src, dst);
     }
