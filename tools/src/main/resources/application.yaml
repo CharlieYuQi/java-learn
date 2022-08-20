@@ -1,0 +1,17 @@
+# actuator 监控配置
+management:
+  #actuator端口 如果不配置做默认使用上面8080端口
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        #默认值访问health,info端点  用*可以包含全部端点
+        include: "*"
+      #修改访问路径 2.0之前默认是/; 2.0默认是/actuator可以通过这个属性值修改
+      base-path: /actuator
+  endpoint:
+    shutdown:
+      enabled: true #打开shutdown端点
+    health:
+      show-details: always #获得健康检查中所有指标的详细信息
