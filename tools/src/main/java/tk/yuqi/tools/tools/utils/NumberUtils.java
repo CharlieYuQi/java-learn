@@ -1,6 +1,9 @@
 
 package tk.yuqi.tools.tools.utils;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
@@ -87,5 +90,9 @@ public class NumberUtils {
         BigDecimal number = new BigDecimal(a);
         BigDecimal divinum = new BigDecimal(b);
         return df2.format(number.divide(divinum).setScale(3, BigDecimal.ROUND_HALF_UP).doubleValue());
+    }
+
+    public static void main(String[] args) {
+        System.out.println(JSON.toJSONString(new JSONObject()));
     }
 }

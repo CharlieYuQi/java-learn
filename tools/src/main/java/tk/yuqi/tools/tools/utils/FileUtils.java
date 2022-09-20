@@ -27,10 +27,11 @@ public class FileUtils {
 
     public static void main(String[] args) {
 
-        String path = "/Volumes/disk2_18867103286/共享文件夹/Media/TV Shows/Test";
-        String prefix = "苍兰诀S01E";
-        String deletedName = "1080.";
+        String path = "/Volumes/disk2_18867103286/共享文件夹/Media/TV Shows/星汉灿烂 S01";
+        String prefix = "星汉灿烂";
+        String deletedName = "龙族";
+        String deletedPostName = "";
         FileUtils fileUtils = new FileUtils();
-        fileUtils.rename(path,prefix,deletedName,null);
+        fileUtils.rename(path,prefix,deletedName,deletedPostName);
     }
 }
