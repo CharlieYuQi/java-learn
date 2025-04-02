@@ -1,8 +1,6 @@
 
 package tk.yuqi.tools.tools.mybatis.domain;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
 import lombok.Data;
 import lombok.ToString;
 
@@ -14,7 +12,6 @@ import lombok.ToString;
 
 @Data
 @ToString(callSuper = true)
-@XmlRootElement
 public class City extends BaseFeatrue{
     private Long id;
     private String name;

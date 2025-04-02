@@ -3,7 +3,6 @@ package tk.yuqi.tools.tools.exception;
 import java.util.Locale;
 
 import org.jetbrains.annotations.PropertyKey;
-import org.omg.PortableInterceptor.LOCATION_FORWARD;
 
 public class Asserts {
 

@@ -6,7 +6,7 @@ import java.io.File;
 
 public class FileUtils {
 
-    public void rename(String path, String prefix, String deletedPreName,String deletedPostName){
+    public void rename(String path, String prefix, String deletedPreName,String deletedPostName, String newPostName){
 
         File rootDirectory = new File(path);
         File[] files = rootDirectory.listFiles();
@@ -18,7 +18,7 @@ public class FileUtils {
             if (StringUtils.isNotBlank(deletedPostName)){
                 originName= originName.replace(deletedPostName, "");
             }
-            String newName = prefix + originName;
+            String newName = prefix + originName + newPostName;
             boolean res = file.renameTo(new File(path+"/"+newName));
             System.out.println("rename "+newName+" result:"+res);
         }
@@ -27,11 +27,16 @@ public class FileUtils {
 
     public static void main(String[] args) {
 
-        String path = "/Volumes/disk2_18867103286/共享文件夹/Media/TV Shows/星汉灿烂 S01";
-        String prefix = "星汉灿烂";
-        String deletedName = "龙族";
+//        [DBD-Raws][SW笔记][01][1080P][BDRip][HEVC-10bit][FLAC]
+        String path = "/Users/yuqi/Movies/进击的巨人 S04";
+        String newPrefix = "进击的巨人 S04E";
+        String deletedPrefixName = "";
         String deletedPostName = "";
+        String newPostName = "";
+//        String deletedName = "[zza] Death Note - ";
+//        String deletedPostName = " [1080p.x265].ass";
+//        String newPostName = "][1080P][BDRip][HEVC-10bit][FLAC].ass";
         FileUtils fileUtils = new FileUtils();
-        fileUtils.rename(path,prefix,deletedName,deletedPostName);
+        fileUtils.rename(path,newPrefix,deletedPrefixName,deletedPostName,newPostName);
     }
 }

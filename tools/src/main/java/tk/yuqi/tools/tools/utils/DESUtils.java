@@ -26,11 +26,8 @@ public class DESUtils {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
-            throw new RuntimeException("参数数量错误");
-        }
-        String key = "1234567890";
-        String val = "2afsdfasdf";
+        String key = "123456789024132141234125435145345";
+        String val = "2afsdfasdf2241212341234";
         String encrypt = encrypt(val, key);
         System.out.println(val);
         System.out.println(encrypt);
