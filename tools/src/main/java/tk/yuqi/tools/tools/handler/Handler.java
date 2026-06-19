@@ -16,9 +16,9 @@ import org.springframework.stereotype.Component;
 @Component
 public @interface Handler {
 
-    String group() default "DEFAULT_GROUP";
+    String group();
 
-    String jobName() default "DEFAULT_JOB_NAME";
+    String jobName();
 
     String bizKey() default "";
 }

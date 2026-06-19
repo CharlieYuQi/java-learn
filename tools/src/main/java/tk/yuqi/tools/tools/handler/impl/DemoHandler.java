@@ -10,10 +10,10 @@ import tk.yuqi.tools.tools.handler.TaskHandler;
  *
  * @since 2018/7/15
  */
-@Handler
+@Handler(group = "DEFAULT_GROUP", jobName = "DEFAULT_JOB_NAME")
 public class DemoHandler implements TaskHandler {
     @Override
-    public ResultDTO execute(TaskContext taskContext) {
+    public ResultDTO<?> execute(TaskContext taskContext) {
         return ResultDTO.trueResult(Boolean.TRUE);
     }
 }

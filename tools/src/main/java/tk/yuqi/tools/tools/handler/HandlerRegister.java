@@ -1,8 +1,8 @@
 
 package tk.yuqi.tools.tools.handler;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanInstantiationException;
@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class HandlerRegister implements BeanPostProcessor {
 
-    private static Map<String, TaskHandler> handlerMap = new HashMap<>();
+    private static final Map<String, TaskHandler> handlerMap = new ConcurrentHashMap<>();
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String name) throws BeansException {
@@ -44,7 +44,7 @@ public class HandlerRegister implements BeanPostProcessor {
             throw new BeanInstantiationException(this.getClass(), "Task Handler duplicated. key:" + key);
         }
 
-        log.warn("Register Handler. key={}, class={}", key, beanClass.getName());
+        log.info("Register Handler. key={}, class={}", key, beanClass.getName());
         handlerMap.put(key, (TaskHandler)bean);
         return bean;
     }

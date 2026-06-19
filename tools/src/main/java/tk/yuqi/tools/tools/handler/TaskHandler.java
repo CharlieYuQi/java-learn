@@ -9,5 +9,5 @@ import tk.yuqi.tools.tools.ResultDTO;
  */
 public interface TaskHandler {
 
-    ResultDTO execute(TaskContext taskContext);
+    ResultDTO<?> execute(TaskContext taskContext);
 }
